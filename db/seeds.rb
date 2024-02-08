@@ -35,11 +35,19 @@ end
 puts '--- 10 users ---'
 
 20.times do |i|
-  Gossip.create(
+  Gossip.create!(
     title: Faker::Lorem.words(number: rand(3..8)),
     content: Faker::Lorem.paragraph(sentence_count: rand(2..8)),
     # foreign key
     user: User.all.sample
   )
 end
+puts '--- 20 gossips ---'
+
+10.times do |i|
+  Tag.create!(
+    title: Faker::Lorem.word
+  )
+end
+puts '--- 10 tags ---'
 
