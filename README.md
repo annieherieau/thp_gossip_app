@@ -25,11 +25,11 @@ To launch Rails console
 ```
 Print tables in Rails console
 ```bash
-  > tp City.all
-  > tp User.all
-  > tp Gossip.all
-  > tp Tag.all
-  > tp Comment.all
-  > tp Like.all
+ tp City.all, :id, :name, :user_ids
+ tp User.all, id:, :first_name, :city_id
+ tp Gossip.all, :id, :title, :user_id, :tag_ids
+ tp Tag.all, :id, :name, :gossip_ids
+ tp Comment.all
+ tp Like.all
 ```
 
